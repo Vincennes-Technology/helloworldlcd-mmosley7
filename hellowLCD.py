@@ -7,7 +7,7 @@ import time
 import subprocess
 
 lcd = LCD.Adafruit_CharLCDPlate()
-IP = subprocess.check_output(['hostname','-I'])
+IP = subprocess.check_output(['hostname', '-I'])
 Name = subprocess.check_output(['hostname']).strip()
 
 displaytext1 = Name
@@ -26,8 +26,6 @@ while (True):
                 lcd.message(displaytext)
                 refresh = True
                 wrefresh = False
-
-
         else:
             if refresh:
                 lcd.clear()
